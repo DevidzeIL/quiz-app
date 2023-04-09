@@ -11,10 +11,10 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
   const { theme, toggleTheme } = useTheme();
   return (
     <div className={`main-layout ${theme}-theme`}>
+      <main>{children}</main>
       <button className="button-theme " onClick={toggleTheme}>
         {theme === "light" ? <MoonIcon /> : <SunIcon />}
       </button>
-      <main>{children}</main>
     </div>
   );
 };

@@ -2,6 +2,7 @@
   min-height: 100vh;
   box-sizing: border-box;
   padding: 20px;
+  position: relative;
 }
 
 .light-theme {
@@ -34,7 +35,7 @@ button {
   margin-right: 0.5rem;
 }
 .button-theme {
-  position: absolute;
+  position: fixed;
   bottom: 10px;
   right: 10px;
   width: 50px;

@@ -35,6 +35,7 @@ const Results: React.FC<ResultsProps> = ({ quizTheme, results, onReset }) => {
                 Правильный ответ:{" "}
                 {getOptionText(result.question.options, result.question.answer)}
               </p>
+              <br />
             </div>
           ))}
         </>

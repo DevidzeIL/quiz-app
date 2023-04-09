@@ -77,6 +77,8 @@ const Quiz: React.FC<QuizProps> = ({ quizTheme, data, onFinish, onReset }) => {
     }
   };
 
+  console.log({ data });
+
   return (
     <div>
       <div className="quiz-header">
