@@ -1,0 +1,42 @@
+.main-layout {
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.light-theme {
+  background-color: white;
+  color: black;
+}
+
+.dark-theme {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.light-theme button {
+  background-color: white;
+  color: black;
+  border: 1px solid #444;
+  border-radius: 5px;
+}
+
+.dark-theme button {
+  background-color: #444;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 5px;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+.button-theme {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 50px;
+  margin: auto;
+}
