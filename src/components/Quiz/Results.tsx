@@ -19,7 +19,7 @@ const Results: React.FC<ResultsProps> = ({ quizTheme, results, onReset }) => {
   return (
     <div>
       <h3>
-        {quizTheme}: Кол-во правильных ответов: {correctAnswers} из{" "}
+        {quizTheme}: Количество правильных ответов: {correctAnswers} из{" "}
         {totalAnswers}
       </h3>
       {totalAnswers > correctAnswers ? (
