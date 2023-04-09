@@ -1,6 +1,7 @@
 import { ContentLayout } from "src/components/Layout";
 import { useState } from "react";
 import { Question, Result } from "src/components/Quiz/types/quiz-types";
+import "./Home.css";
 
 import quiz_history from "src/assets/quiz/quiz_history.json";
 import quiz_law from "src/assets/quiz/quiz_law.json";
@@ -50,7 +51,7 @@ export const Home = () => {
       <ContentLayout title="Home">
         <div className="content-layout-body">
           {!quizData && !quizResults && (
-            <div>
+            <div className="home-themes">
               <button onClick={() => handleCategorySelect("history")}>
                 История
               </button>

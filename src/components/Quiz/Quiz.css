@@ -21,6 +21,11 @@
 
 .quiz-reset {
   margin-top: 50px;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  height: 37px;
+  margin: auto;
 }
 
 .loading-icon {
