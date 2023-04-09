@@ -51,9 +51,9 @@ export const Home = () => {
         <div className="content-layout-body">
           {!quizData && !quizResults && (
             <div>
-              {/* <button onClick={() => handleCategorySelect("history")}>
+              <button onClick={() => handleCategorySelect("history")}>
                 История
-              </button> */}
+              </button>
               <button onClick={() => handleCategorySelect("law")}>Право</button>
               <button onClick={() => handleCategorySelect("language")}>
                 Грузинский язык
