@@ -58,7 +58,7 @@ export const Home = () => {
               <button onClick={() => handleCategorySelect("language")}>
                 Грузинский язык
               </button>
-              <button onClick={() => handleCategorySelect("test")}>Тест</button>
+              {/* <button onClick={() => handleCategorySelect("test")}>Тест</button> */}
             </div>
           )}
           {quizData && !quizResults && (
