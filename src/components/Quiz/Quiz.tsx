@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { QuizProps, Result } from "./types/quiz-types";
 import "./Quiz.css";
 import { translateText } from "src/utils/translate";
+import Spinner from "../UI/Spinner";
 
 const Quiz: React.FC<QuizProps> = ({ quizTheme, data, onFinish, onReset }) => {
   const [quizData, setQuizData] = useState(data);
@@ -11,8 +12,10 @@ const Quiz: React.FC<QuizProps> = ({ quizTheme, data, onFinish, onReset }) => {
   const [currentQuestion, setCurrentQuestion] = useState<number>(0);
   const [results, setResults] = useState<Result[]>([]);
   const [translated, setTranslated] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const handleTranslate = async () => {
+    setLoading(true);
     if (!translated) {
       if (isFirstTranslated) {
         setQuizData(translatedQuizData);
@@ -54,6 +57,7 @@ const Quiz: React.FC<QuizProps> = ({ quizTheme, data, onFinish, onReset }) => {
       setQuizData(originalQuizData);
       setTranslated(false);
     }
+    setLoading(false);
   };
 
   const handleSubmit = (userAnswer: string) => {
@@ -75,13 +79,16 @@ const Quiz: React.FC<QuizProps> = ({ quizTheme, data, onFinish, onReset }) => {
 
   return (
     <div>
-      {quizTheme}: {data.length} вопросов.
+      <div className="quiz-header">
+        {quizTheme}: {data.length} вопросов.
+        {loading && <Spinner />}
+      </div>
       <div className="quiz-question">
         <h2>
           {quizData[currentQuestion].number}.{" "}
           {quizData[currentQuestion].question}
         </h2>
-        <button onClick={handleTranslate}>
+        <button onClick={handleTranslate} disabled={loading}>
           {translated ? "Перевести на грузинский" : "Перевести на русский"}
         </button>
       </div>
